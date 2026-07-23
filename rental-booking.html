@@ -1,0 +1,165 @@
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rental Booking | Gadgets4U</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ HEADER ================-->
+
+<header>
+
+    <div class="logo">
+        <h2>Gadgets4U</h2>
+        <p>Your Smart Electronics Rental Partner</p>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="categories.html" >Categories</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+    </nav>
+    <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="signup-btn">Sign Up</a>
+    </div>
+
+    <div class="icons">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+
+    </div>
+
+</header>
+<section class="product-summary">
+
+    <img id="productImage" src="" alt="Product">
+
+    <div class="product-info">
+
+        <h2 id="productTitle"></h2>
+
+        <p><strong>Rental Price:</strong> <span id="productPrice"></span></p>
+
+        <p><strong>Security Deposit:</strong> <span id="productDeposit"></span></p>
+
+        <p><strong>Availability:</strong>
+            <span class="available">✅ In Stock</span>
+        </p>
+
+    </div>
+
+</section>
+<section class="booking">
+
+<h1>Rental Booking</h1>
+
+<p>Complete the form below to rent your gadget.</p>
+
+<form id="bookingForm">
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input type="text" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input type="email" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Phone Number</label>
+
+<input type="tel" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Select Product</label>
+
+<div class="form-group">
+
+<input
+type="text"
+id="productName"
+readonly>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Rental Start Date</label>
+
+<input type="date" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Rental Duration</label>
+
+<select>
+
+<option>1 Week</option>
+
+<option>2 Weeks</option>
+
+<option>1 Month</option>
+
+<option>3 Months</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Delivery Address</label>
+
+<textarea rows="4" required></textarea>
+
+</div>
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Gadgets4U</p>
+
+</footer>
+
+<script src="js/booking.js"></script>
+
+</body>
+</html>
