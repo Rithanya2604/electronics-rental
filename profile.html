@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Gadgets4U</title>
+
+    <link rel="icon" href="images/logo.jpg">
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <h2>
+                    Gadgets4U
+                </h2>
+
+                <p>
+                    Your Smart Electronics Rental Partner
+                </p>
+
+            </a>
+
+        </div>
+
+
+        <nav>
+
+            <a
+                href="index.html"
+                class="">
+                Home
+            </a>
+
+            <a
+                href="categories.html"
+                class="">
+                Categories
+            </a>
+
+            <a
+                href="products.html"
+                class="">
+                Products
+            </a>
+
+            <a
+                href="about.html"
+                class="">
+                About Us
+            </a>
+
+            <a
+                href="contact.html"
+                class="">
+                Contact Us
+            </a>
+
+        </nav>
+
+
+        <!-- Authentication buttons -->
+
+        <div class="auth-buttons">
+
+            <a
+                href="login.html"
+                class="login-btn">
+                Login
+            </a>
+
+            <a
+                href="register.html"
+                class="signup-btn">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <!-- Header icons -->
+
+        <div class="icons">
+
+            <a
+                class="icon-link"
+                href="cart.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="count"
+                    data-cart-count>
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                class="icon-link"
+                href="wishlist.html">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span
+                    class="count"
+                    data-wishlist-count>
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                class="icon-link"
+                href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         PROFILE PAGE
+    ========================== -->
+
+    <main class="profile-page">
+
+        <section class="profile">
+
+
+            <!-- =========================
+                 PROFILE CARD
+            ========================== -->
+
+            <aside class="profile-card">
+
+
+                <!-- Profile image -->
+
+                <div class="profile-image-container">
+
+                    <img
+                        id="profileImage"
+                        src="images/profile.png"
+                        alt="Profile Picture"
+                        class="profile-image"
+                    >
+
+
+                    <!-- Change photo button -->
+
+                    <label
+                        for="profileImageInput"
+                        class="change-photo-btn">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Change Photo
+
+                    </label>
+
+
+                    <!-- Hidden file input -->
+
+                    <input
+                        type="file"
+                        id="profileImageInput"
+                        accept="image/png,image/jpeg,image/jpg"
+                        hidden
+                    >
+
+                </div>
+
+
+                <!-- User name -->
+
+                <h2 id="profileName">
+                    Guest User
+                </h2>
+
+
+                <!-- User email -->
+
+                <p id="profileEmail">
+                    Login to see your email
+                </p>
+
+
+                <!-- User phone -->
+
+                <p id="profilePhone">
+                    Phone not added
+                </p>
+
+
+                <!-- Profile update -->
+
+                <a
+                    href="register.html"
+                    class="edit-btn">
+
+                    Create / Update Profile
+
+                </a>
+
+            </aside>
+
+
+            <!-- =========================
+                 DASHBOARD
+            ========================== -->
+
+            <div class="dashboard">
+
+
+                <!-- Dashboard heading -->
+
+                <div class="dashboard-heading">
+
+                    <div>
+
+                        <span class="category-tag">
+                            Account Dashboard
+                        </span>
+
+                        <h1>
+                            Welcome back!
+                        </h1>
+
+                        <p>
+                            Track your rentals, wishlist and booking history.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Logout -->
+
+                    <a
+                        id="logoutBtn"
+                        href="index.html"
+                        class="outline-btn">
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+
+                <!-- =========================
+                     STATISTICS
+                ========================== -->
+
+                <div class="stats">
+
+
+                    <div class="stat-box">
+
+                        <h3 id="activeRentals">
+                            0
+                        </h3>
+
+                        <p>
+                            Active Rentals
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <h3 id="completedRentals">
+                            0
+                        </h3>
+
+                        <p>
+                            Completed Rentals
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <h3 id="wishlistCount">
+                            0
+                        </h3>
+
+                        <p>
+                            Wishlist Items
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     RENTAL HISTORY
+                ========================== -->
+
+                <div class="dashboard-panel">
+
+                    <h2>
+                        Rental History
+                    </h2>
+
+                    <div id="bookingHistory"></div>
+
+                </div>
+
+
+                <!-- =========================
+                     QUICK ACTIONS
+                ========================== -->
+
+                <div class="actions">
+
+
+                    <a href="products.html">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        Browse Products
+
+                    </a>
+
+
+                    <a href="wishlist.html">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        My Wishlist
+
+                    </a>
+
+
+                    <a href="cart.html">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        My Cart
+
+                    </a>
+
+
+                    <a href="contact.html">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        Support
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div>
+
+            <h3>
+                Gadgets4U
+            </h3>
+
+            <p>
+                Your Smart Electronics Rental Partner
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Gadgets4U. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Toast -->
+
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

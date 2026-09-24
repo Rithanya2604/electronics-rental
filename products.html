@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Products | Gadgets4U</title><link rel="icon" href="images/logo.jpg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></head><body><header>
+<div class="logo"><a href="index.html"><h2>Gadgets4U</h2><p>Your Smart Electronics Rental Partner</p></a></div>
+<nav>
+<a href="index.html" class="">Home</a>
+<a href="categories.html" class="">Categories</a>
+<a href="products.html" class="active">Products</a>
+<a href="about.html" class="">About Us</a>
+<a href="contact.html" class="">Contact Us</a>
+</nav>
+<div class="auth-buttons"><a href="login.html" class="login-btn">Login</a><a href="register.html" class="signup-btn">Sign Up</a></div>
+<div class="icons">
+<a class="icon-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="count" data-cart-count>0</span></a>
+<a class="icon-link" href="wishlist.html"><i class="fa-solid fa-heart"></i><span class="count" data-wishlist-count>0</span></a>
+<a class="icon-link" href="profile.html"><i class="fa-solid fa-user"></i></a>
+</div>
+</header><main class="products-page"><div class="page-title"><h1>Our Rental Products</h1><p>Premium electronics with flexible rental periods and simple booking.</p></div>
+<div class="catalog-toolbar"><div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="productSearch" placeholder="Search gadgets..."></div><select id="categoryFilter"><option>All</option><option>Laptops</option><option>Mobiles</option><option>Cameras</option><option>Accessories</option><option>Gaming</option><option>Speakers</option><option>Tablets</option><option>Wearables</option><option>Projectors</option><option>Drones</option><option>Monitors</option><option>Printers</option></select></div>
+<div id="productsGrid" class="product-grid"></div></main><script>document.addEventListener("DOMContentLoaded",()=>{const q=new URLSearchParams(location.search).get("category");if(q){const s=document.getElementById("categoryFilter");s.value=q; if(s.value!==q)s.value="All";}document.getElementById("productSearch").addEventListener("input",renderProducts);document.getElementById("categoryFilter").addEventListener("change",renderProducts);renderProducts();});</script><footer><div><h3>Gadgets4U</h3><p>Your Smart Electronics Rental Partner</p></div><div class="footer-links"><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></div><p>© 2026 Gadgets4U. All rights reserved.</p></footer><div id="toast" class="toast"></div><script src="js/app.js"></script></body></html>
